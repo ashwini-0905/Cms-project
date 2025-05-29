@@ -35,24 +35,13 @@ const SignupPage = () => {
   };
 
   return (
-    <div
-      style={{
-        maxWidth: 420,
-        margin: "48px auto",
-        padding: 32,
-        border: "none",
-        borderRadius: 16,
-        boxShadow: "0 4px 24px rgba(0,0,0,0.10)",
-        background: "#fff",
-        fontFamily: "Segoe UI, Arial, sans-serif",
-      }}
-    >
-      <h2 style={{ textAlign: "center", marginBottom: 24, color: "#2d3748" }}>
-        Sign Up for <span style={{ color: "#3182ce" }}>Class Timetable Scheduler</span>
+    <div className="max-w-md mx-auto mt-12 p-8 rounded-2xl shadow-lg bg-white font-sans">
+      <h2 className="text-center mb-6 text-2xl font-semibold text-gray-800">
+        Sign Up for <span className="text-blue-600">Class Timetable Scheduler</span>
       </h2>
       <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: 18 }}>
-          <label style={{ display: "block", marginBottom: 6, fontWeight: 500, color: "#4a5568" }}>
+        <div className="mb-4">
+          <label className="block mb-1 font-medium text-gray-700">
             Name
           </label>
           <input
@@ -60,20 +49,12 @@ const SignupPage = () => {
             value={form.name}
             onChange={handleChange}
             required
-            style={{
-              width: "100%",
-              padding: "10px 12px",
-              border: "1px solid #cbd5e1",
-              borderRadius: 6,
-              fontSize: 16,
-              outline: "none",
-              transition: "border 0.2s",
-            }}
+            className="w-full px-3 py-2 border border-slate-300 rounded-md text-base outline-none focus:border-blue-400 transition"
             placeholder="Enter your name"
           />
         </div>
-        <div style={{ marginBottom: 18 }}>
-          <label style={{ display: "block", marginBottom: 6, fontWeight: 500, color: "#4a5568" }}>
+        <div className="mb-4">
+          <label className="block mb-1 font-medium text-gray-700">
             Email
           </label>
           <input
@@ -82,20 +63,12 @@ const SignupPage = () => {
             value={form.email}
             onChange={handleChange}
             required
-            style={{
-              width: "100%",
-              padding: "10px 12px",
-              border: "1px solid #cbd5e1",
-              borderRadius: 6,
-              fontSize: 16,
-              outline: "none",
-              transition: "border 0.2s",
-            }}
+            className="w-full px-3 py-2 border border-slate-300 rounded-md text-base outline-none focus:border-blue-400 transition"
             placeholder="Enter your email"
           />
         </div>
-        <div style={{ marginBottom: 18 }}>
-          <label style={{ display: "block", marginBottom: 6, fontWeight: 500, color: "#4a5568" }}>
+        <div className="mb-4">
+          <label className="block mb-1 font-medium text-gray-700">
             Password
           </label>
           <input
@@ -104,109 +77,51 @@ const SignupPage = () => {
             value={form.password}
             onChange={handleChange}
             required
-            style={{
-              width: "100%",
-              padding: "10px 12px",
-              border: "1px solid #cbd5e1",
-              borderRadius: 6,
-              fontSize: 16,
-              outline: "none",
-              transition: "border 0.2s",
-            }}
+            className="w-full px-3 py-2 border border-slate-300 rounded-md text-base outline-none focus:border-blue-400 transition"
             placeholder="Create a password"
           />
         </div>
-        <div style={{ marginBottom: 18 }}>
-          <label style={{ display: "block", marginBottom: 6, fontWeight: 500, color: "#4a5568" }}>
+        <div className="mb-4">
+          <label className="block mb-1 font-medium text-gray-700">
             Confirm Password
           </label>
           <input
-            name="confirmPassword"
+            name="confirm password"
             type="password"
             value={form.confirmPassword}
             onChange={handleChange}
             required
-            style={{
-              width: "100%",
-              padding: "10px 12px",
-              border: "1px solid #cbd5e1",
-              borderRadius: 6,
-              fontSize: 16,
-              outline: "none",
-              transition: "border 0.2s",
-            }}
-            placeholder="Re-enter your password"
+            className="w-full px-3 py-2 border border-slate-300 rounded-md text-base outline-none focus:border-blue-400 transition"
+            placeholder="Re-enter your password "
           />
         </div>
-        <div style={{ marginBottom: 22 }}>
-          <label style={{ display: "block", marginBottom: 6, fontWeight: 500, color: "#4a5568" }}>
+        <div className="mb-5">
+          <label className="block mb-1 font-medium text-gray-700">
             Role
           </label>
           <select
             name="role"
             value={form.role}
             onChange={handleChange}
-            style={{
-              width: "100%",
-              padding: "10px 12px",
-              border: "1px solid #cbd5e1",
-              borderRadius: 6,
-              fontSize: 16,
-              background: "#f7fafc",
-              color: "#2d3748",
-              outline: "none",
-              transition: "border 0.2s",
-            }}
+            className="w-full px-3 py-2 border border-slate-300 rounded-md text-base bg-gray-50 text-gray-800 outline-none focus:border-blue-400 transition"
           >
             <option value="student">Student</option>
             <option value="teacher">Teacher</option>
           </select>
         </div>
         {error && (
-          <div
-            style={{
-              color: "#e53e3e",
-              background: "#fff5f5",
-              border: "1px solid #fed7d7",
-              borderRadius: 5,
-              padding: "8px 12px",
-              marginBottom: 14,
-              fontSize: 15,
-            }}
-          >
+          <div className="text-red-600 bg-red-50 border border-red-200 rounded px-3 py-2 mb-3 text-sm">
             {error}
           </div>
         )}
         {success && (
-          <div
-            style={{
-              color: "#38a169",
-              background: "#f0fff4",
-              border: "1px solid #c6f6d5",
-              borderRadius: 5,
-              padding: "8px 12px",
-              marginBottom: 14,
-              fontSize: 15,
-            }}
-          >
+          <div className="text-green-600 bg-green-50 border border-green-200 rounded px-3 py-2 mb-3 text-sm">
             {success}
           </div>
         )}
         <button
           type="submit"
-          style={{
-            width: "100%",
-            padding: "12px 0",
-            background: "linear-gradient(90deg, #3182ce 0%, #63b3ed 100%)",
-            color: "#fff",
-            fontWeight: 600,
-            fontSize: 17,
-            border: "none",
-            borderRadius: 6,
-            cursor: "pointer",
-            boxShadow: "0 2px 8px rgba(49,130,206,0.08)",
-            transition: "background 0.2s",
-          }}
+          className="w-full py-3 bg-gradient-to-r from-blue-600 to-blue-300 text-white font-semibold text-lg rounded-md shadow transition hover:from-blue-700 hover:to-blue-400"
         >
           Sign Up
         </button>

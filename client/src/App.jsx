@@ -1,10 +1,13 @@
 import React from 'react';
-import SignupPage from './pages/SignupPage';
+import About from './pages/About.jsx';
+
+// import SignIn from './pages/SignIn.jsx';
+//import SignupPage from './pages/SignupPage.jsx';
 
 function App(props) {
   return (
     <div>
-      <SignupPage></SignupPage>
+      <About></About>
     </div>
   );
 }
