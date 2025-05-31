@@ -1,15 +1,11 @@
-import React from 'react';
-import About from './pages/About.jsx';
 
-// import SignIn from './pages/SignIn.jsx';
-//import SignupPage from './pages/SignupPage.jsx';
 
-function App(props) {
+function App() {
   return (
     <div>
-      <About></About>
+       dev
     </div>
   );
 }
 
-export default App;
+export default App
