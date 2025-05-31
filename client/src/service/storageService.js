@@ -23,7 +23,7 @@ class StorageService {
 
 	// Set a value by key
 	setItem(itemKey, value) {
-		this.db[itemKey] = value;
+		this.db[itemKey] =value;
 		this._save();
 	}
 
