@@ -123,7 +123,7 @@ const SignupPage = () => {
           type="submit"
           className="w-full py-3 bg-gradient-to-r from-blue-600 to-blue-300 text-white font-semibold text-lg rounded-md shadow transition hover:from-blue-700 hover:to-blue-400"
         >
-          Sign Up
+          Sign UP
         </button>
       </form>
     </div>
