@@ -54,11 +54,11 @@ const Scheduling = () => {
     };
 
     return (
-        <div className="max-w-3xl mx-auto p-6">
+        <div className="max-w-3xl mx-auto p-6 bg-pink-300">
             <h2 className="text-2xl font-bold mb-4">Schedule a Class</h2>
             <form
                 onSubmit={handleSubmit}
-                className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-8"
+                className="bg-purple-300 shadow-md rounded px-8 pt-6 pb-8 mb-8"
             >
                 <div className="mb-4">
                     <label className="block text-gray-700 mb-2">Class Name</label>
@@ -117,7 +117,7 @@ const Scheduling = () => {
                 </div>
                 <button
                     type="submit"
-                    className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                    className="bg-pink-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                 >
                     {editIndex !== null ? "Update Schedule" : "Add Schedule"}
                 </button>
@@ -137,7 +137,7 @@ const Scheduling = () => {
 
             <h3 className="text-xl font-semibold mb-2">Scheduled Classes</h3>
             <div className="overflow-x-auto">
-                <table className="min-w-full bg-white shadow rounded">
+                <table className="min-w-full bg-pink-200 shadow rounded">
                     <thead>
                         <tr>
                             <th className="py-2 px-4 border-b">Class</th>
@@ -165,7 +165,7 @@ const Scheduling = () => {
                                 <td className="py-2 px-4 border-b">{sch.time}</td>
                                 <td className="py-2 px-4 border-b">
                                     <button
-                                        className="text-blue-600 hover:underline mr-2"
+                                        className="text-purple-600 hover:underline mr-2"
                                         onClick={() => handleEdit(idx)}
                                     >
                                         Edit
@@ -186,4 +186,4 @@ const Scheduling = () => {
     );
 };
 
-export default Scheduling;
+export default Schedule;
